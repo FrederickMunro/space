@@ -124,35 +124,3 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
 `
-
-const Left = styled.div`
-  position: fixed;
-  height: 100%;
-  width: 30%;
-  left: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-`
-
-const Right = styled.div`
-position: fixed;
-height: 100%;
-width: 30%;
-right: 5%;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-`
-
-const Bottom = styled.div`
-  background: white;
-  width: 100%;
-  height: 30%;
-`
-
-const Top = styled.div`
-  background: grey;
-  width: 100%;
-  height: 40%;
-`

@@ -53,7 +53,7 @@ const ShootingStars = () => {
 
     setStarList([...starList, star])
 
-    setTimeout(() => setStarList((prevStars) => prevStars.filter((star) => star.key !== animid)), animtime*1000+1000);
+    setTimeout(() => setStarList((prevStars) => prevStars.filter((star) => star.props.animid !== animid)), animtime*1000+1000);
   }
 
   return(

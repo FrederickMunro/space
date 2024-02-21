@@ -15,7 +15,7 @@ const StaticStars = () => {
   const [staticStars, setStaticStars] = useState<JSX.Element[]>([]);
 
   useEffect(() => {
-    const staticStarsArray = [...Array(300).keys()].map((e, i=0) => (
+    const staticStarsArray = [...Array(300).keys()].map((i=0) => (
           <Star left={Math.random()*100} top={Math.random()*100} size={Math.ceil(Math.random()*5)} key={i++} />
     ));
     setStaticStars(staticStarsArray);

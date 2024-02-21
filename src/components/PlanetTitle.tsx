@@ -4,17 +4,19 @@ interface PlanetTitleProps {
   children: any;
   isvisible: boolean;
   tilt: number;
+  width: number;
 }
 
 interface TitleProps {
   tilt: number;
+  width: number;
 }
 
-const PlanetTitle = ({ children, isvisible, tilt}: PlanetTitleProps) => {
+const PlanetTitle = ({ children, isvisible, tilt, width }: PlanetTitleProps) => {
 
   return(
     <>
-      { isvisible && <Title tilt={tilt}>{children}</Title> }
+      { isvisible && <Title tilt={tilt} width={width}>{children}</Title> }
     </>
   )
 }
@@ -37,9 +39,10 @@ const Title = styled.h2<TitleProps>`
   user-select: none;
   pointer-events: none;
   color: transparent;
+  width: ${props => props.width}%;
+  text-align: center;
   animation: 
-    typing-h2 1s steps(20, end) forwards,
-    blink-caret-h2 0.5s step-end 2;
+    typing-h2 1.5s steps(30, end) forwards;
 
   @keyframes typing-h2 {
     from {
@@ -48,16 +51,7 @@ const Title = styled.h2<TitleProps>`
     }
     to {
       color: white;
-      width: 65%
-    }
-  }
-
-  @keyframes blink-caret-h2 {
-    0% {
-      border-right-color: transparent
-    }
-    50% {
-      border-right-color: white;
+      width: 100%;
     }
   }
 `

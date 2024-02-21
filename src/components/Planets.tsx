@@ -28,6 +28,7 @@ const Planets = () => {
     handleClicked: Function;
     image: string;
     yearlength: number;
+    width: number;
   };
 
   const [isClicked, setIsClicked] = useState<number[]>([0, 0, 0, 0]);
@@ -53,6 +54,7 @@ const Planets = () => {
       handleClicked: () => handleClicked(0),
       image: MercuryImage,
       yearlength: 88,
+      width: 60,
       },
     { 
       name: 'Venus',
@@ -67,6 +69,7 @@ const Planets = () => {
       handleClicked: () => handleClicked(1),
       image: VenusImage,
       yearlength: 225,
+      width: 30,
       },
     { 
       name: 'Earth',
@@ -81,6 +84,7 @@ const Planets = () => {
       handleClicked: () => handleClicked(2),
       image: EarthImage,
       yearlength: 1,
+      width: 5,
       },
     { 
       name: 'Mars',
@@ -95,6 +99,7 @@ const Planets = () => {
       handleClicked: () => handleClicked(3),
       image: MarsImage,
       yearlength: 687,
+      width: 15,
       },
   ]
 

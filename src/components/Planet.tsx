@@ -18,6 +18,7 @@ interface PlanetProps {
     handleClicked: Function;
     image: string;
     yearlength: number;
+    width: number;
   }
 };
 
@@ -43,6 +44,7 @@ const Planet = ({ planet }: PlanetProps) => {
             <PlanetTitle
               isvisible={isHovered}
               tilt={planet.tilt}
+              width={planet.width}
             >
               {planet.name}
             </PlanetTitle> 
